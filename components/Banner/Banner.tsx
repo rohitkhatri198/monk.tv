@@ -14,31 +14,30 @@ function Banner({ netflixOriginals }: Props) {
   }, [netflixOriginals]);
 
   return (
-    <div className="flex flex-col space-y-4 py-16 md:space-y-4 lg:h-[85vh] lg:justify-end">
+    <div className="flex flex-col space-y-4 py-16 md:space-y-4 lg:h-[95vh] lg:justify-end">
       <div className="absolute top-0 left-0 h-[95vh] -z-10 w-screen">
-        <Image
+        <img
           src={`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}
           alt="banner"
-          layout="fill"
-          objectFit="cover"
+         className="fill w-100% object-cover"
         />
       </div>
-      <div>
-        <h1 className="text-2xl md:text-4xl lg:text-8xl font-bold">
+      <div className="">
+        <h1 className="text-2xl md:text-4xl lg:text-8xl mb-7 font-bold">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
-        <p className="max-w-xs text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">
+        <p className="max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">
           {movie?.overview}
         </p>
       </div>
-      <div className="flex justify-start items-center space-x-6">
+      <div className="flex justify-start  items-center space-x-6">
         <button className="bannerBtn bg-white text-black">
           <div className="h-4 w-4 md:h-7 md:w-7  text-black">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="w-6 h-[1.9rem]"
+              className="w-5 h-6 md:h-[1.9rem]"
             >
               <path
                 fillRule="evenodd"

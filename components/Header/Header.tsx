@@ -20,7 +20,7 @@ function Header() {
   }, [])
   
   return (
-    <div className={`header ${isScrolled && "bg-[#000000d2] transition-all duration-[.4s] ease"} `}>
+    <div className={`header z-[100] ${isScrolled && "bg-[#000000d2]  transition-all duration-[.4s] ease"} `}>
       <div className="flex items-center space-x-2 md:space-x-10 ">
         <div className="text-white ">
           <img
