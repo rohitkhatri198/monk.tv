@@ -40,7 +40,7 @@ function Header() {
         </div>
       </div>
       <div className="flex items-center space-x-4 text-sm ">
-        <div className="search hidden sm:inline h-7 w-7">
+        <div className="search hidden text-white hover:text-[#69ff69] sm:inline h-7 w-7">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
