@@ -238,7 +238,7 @@ function Login() {
       </Link>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="absolute rounded-[9px] space-y-8 flex  flex-col mx-10 bg-black/75 py-10 px-6 md:mt-0 md:max-w-md md:px-14 mt-24"
+        className="absolute rounded-[9px] space-y-8 flex  flex-col mx-5 bg-black/75 py-10 px-6 md:mt-0 md:max-w-md md:px-14 mt-24"
       >
         <h1 className="text-4xl font-semibold">Sign In</h1>
         <div className="space-y-4">
