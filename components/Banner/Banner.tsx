@@ -29,11 +29,11 @@ function Banner({ netflixOriginals }: Props) {
         />
       </div>
       <div className="">
-        <h1 className="text-2xl md:text-4xl lg:text-8xl mb-7 font-bold">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl mb-7 font-bold">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <p className="max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">
-          {movie?.overview}
+          {movie?.overview.slice(0,105)}
         </p>
       </div>
       <div className="flex justify-start  items-center space-x-6">
