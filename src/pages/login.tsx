@@ -81,8 +81,8 @@ function Login() {
             height={504}
             objectFit="contain"
           />
-          <Image
-            src="/images/1.jpg"
+           <Image
+            src="https://res.cloudinary.com/dduru0fz4/image/upload/v1669186830/xumns-12_gitljf.png"
             alt="Picture of the author"
             width={504}
             height={504}
@@ -141,7 +141,7 @@ function Login() {
             objectFit="contain"
           />
           <Image
-            src="/images/4.jpg"
+            src="https://res.cloudinary.com/dduru0fz4/image/upload/v1669186830/xumns-12_gitljf.png"
             alt="Picture of the author"
             width={504}
             height={504}
@@ -206,11 +206,11 @@ function Login() {
             height={310}
             objectFit="contain"
           />
-          <Image
-            src="/images/3.jpg"
+        <Image
+            src="https://res.cloudinary.com/dduru0fz4/image/upload/v1669186830/xumns-12_gitljf.png"
             alt="Picture of the author"
             width={504}
-            height={310}
+            height={504}
             objectFit="contain"
           />
           <Image
