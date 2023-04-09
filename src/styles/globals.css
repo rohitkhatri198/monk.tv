@@ -150,6 +150,11 @@ a {
   .input{
     @apply w-full rounded bg-[#333] px-5 py-2.5 placeholder-[gray] outline-none focus:bg-[#454545];
   }
+
+  .modalButton{
+    @apply flex items-center justify-center h-11 w-11 rounded-full border-2 border-[gray] bg-[#2a2a2a]/60 transition hover:border-white hover:bg-white/10;
+  }
+
   @media screen and (max-width:768px){
     .middle{
       animation: slideUp 5s linear infinite;

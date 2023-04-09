@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
-import { getApp, getApps, initializeApp } from "firebase/app";
+import { getApp, getApps, initializeApp, } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -16,18 +18,18 @@ const firebaseConfig = {
   measurementId: "G-NT8QBCPCV7",
 };
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-const db = getFirestore();
-const auth = getAuth();
-const analytics = getAnalytics(app);
+const db = getFirestore(app);
+const auth = getAuth(app);
+
 export default app;
 export { auth };
 export { db };
-export { analytics };
 
-function getFirestore() {
-  throw new Error("Function not implemented.");
-}
 
-function getAuth() {
-  throw new Error("Function not implemented.");
-}
+// function getFirestore() {
+//   throw new Error("Function not implemented.");
+// }
+
+// function getAuth() {
+//   throw new Error("Function not implemented.");
+// }

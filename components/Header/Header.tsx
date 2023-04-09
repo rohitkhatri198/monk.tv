@@ -2,12 +2,13 @@ import { BellIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import useAuth from "../../hooks/useAuth";
 // import useAuth from "../../hooks/useAuth";
 
 function Header() {
   const links = ["Home", "Tv shows", "New & Popular", "My List"];
   const [isScrolled, setIsScrolled] = useState(false);
-  // const{logout}=useAuth()
+  const{logout}=useAuth()
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -55,7 +56,7 @@ function Header() {
         <BellIcon className="bell h-7 w-7  text-white hover:text-[#52f152]" />
         <Link href={"/login"}>
           <img
-            // onClick={logout}
+            onClick={logout}
             src="/images/her2.jpg"
             alt="her"
             width={50}

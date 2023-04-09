@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import useAuth from "../../hooks/useAuth";
 // import useAuth from "../../hooks/useAuth";
 
 interface Inputs {
@@ -16,7 +17,7 @@ function Login() {
   const [passwordError, setPasswordError] = useState(
     "Please enter your Password"
   );
-  // const{signIn, signUp}= useAuth()
+  const{signIn, signUp}= useAuth()
 
   const {
     register,
@@ -28,9 +29,9 @@ function Login() {
   const onSubmit: SubmitHandler<Inputs> = async ({email, password}) => {
    
     if (login) {
-      // await signIn(email, password)
+      await signIn(email, password)
     } else {
-      // await signUp(email, password)
+      await signUp(email, password)
     }
     if (password.length < 4) {
       setPasswordError("Password must be at least 4 characters long");

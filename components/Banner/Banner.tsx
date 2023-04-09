@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import{ useRecoilState} from "recoil"
 import { Movie } from "../../type.dt";
 import Image from "next/image";
 import { baseUrl } from "../../constants/movie";
 import { InformationCircleIcon, PlayIcon } from "@heroicons/react/20/solid";
+import { modalState, movieState } from "../../atoms/modalAtom";
 interface Props {
   netflixOriginals: Movie[];
 }
@@ -13,6 +15,9 @@ function Banner({ netflixOriginals }: Props) {
       netflixOriginals[Math.floor(Math.random() * netflixOriginals.length)]
     );
   }, [netflixOriginals]);
+
+  const [showModal, setShowModal] = useRecoilState(modalState);
+  const [currentMovie, setCurrentMovie] = useRecoilState(movieState);
 
   return (
     <div className="flex flex-col space-y-4 py-16 md:space-y-4 lg:h-[95vh] lg:justify-end">
@@ -32,13 +37,16 @@ function Banner({ netflixOriginals }: Props) {
         </p>
       </div>
       <div className="flex justify-start  items-center space-x-6">
-        <button className="bannerBtn bg-white text-black">
+        <button className="bannerBtn bg-[#52f152] text-black">
           <PlayIcon className="h-4 w-4 md:h-7 md:w-7  text-black"/>
           Play
         </button>
-        <button className="bannerBtn bg-[gray]/70 items-center">
+        <button className="bannerBtn bg-[black]/70 items-center" onClick={()=>{
+          setShowModal(true)
+          setCurrentMovie(movie)
+        }}>
           More Info
-          <InformationCircleIcon className="h-5 w-5 md:h-8 md:w-8"/>
+          <InformationCircleIcon className="h-5 w-5 md:h-8 md:w-8 text-[#52f152]"/>
       
         </button>
       </div>
