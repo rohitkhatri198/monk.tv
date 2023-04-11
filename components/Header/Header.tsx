@@ -8,7 +8,7 @@ import useAuth from "../../hooks/useAuth";
 function Header() {
   const links = ["Home", "Tv shows", "New & Popular", "My List"];
   const [isScrolled, setIsScrolled] = useState(false);
-  const{logout}=useAuth()
+  const { logout } = useAuth();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -49,21 +49,20 @@ function Header() {
         </div>
       </div>
       <div className="flex items-center space-x-4 text-sm ">
-        <MagnifyingGlassIcon className="search hidden text-white hover:text-[#52f152] sm:inline h-7 w-7" />
-        <span className="hidden lg:inline  text-white hover:text-[#52f152]">
+        <MagnifyingGlassIcon className="search cursor-pointer  hidden text-white hover:text-[#52f152] sm:inline h-7 w-7" />
+        <span className="hidden lg:inline cursor-pointer  text-white hover:text-[#52f152]">
           Kids
         </span>
-        <BellIcon className="bell h-7 w-7  text-white hover:text-[#52f152]" />
-        <Link href={"/login"}>
-          <img
-            onClick={logout}
-            src="/images/her2.jpg"
-            alt="her"
-            width={50}
-            height={50}
-            className="cursor-pointer rounded object-contain"
-          />
-        </Link>
+        <BellIcon className="bell h-7 w-7 cursor-pointer  text-white hover:text-[#52f152]" />
+
+        <img
+          onClick={logout}
+          src="/images/her2.jpg"
+          alt="her"
+          width={50}
+          height={50}
+          className="cursor-pointer rounded object-contain"
+        />
       </div>
     </div>
   );
